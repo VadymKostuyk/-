@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Садиба Кичера</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Садиба "Кичера"</h1>
+  </header>
+
+  <main>
+    <section class="section" id="rooms">
+      <h2>Наші номери</h2>
+      <div class="rooms-gallery">
+        <div class="room-card" onclick="openRoom(1)">
+          <img src="room1.jpg" alt="Номер 1">
+          <div class="room-info">
+            <h3>Кичера Еко</h3>
+            <p>Чудовий вибір для усамітнення з природою</p>
+          </div>
+        </div>
+
+        <div class="room-card" onclick="openRoom(2)">
+          <img src="room2.jpg" alt="Номер 2">
+          <div class="room-info">
+            <h3>Двокімнатний номер з видом на гори</h3>
+            <p>Краєвиди Вас зачарують</p>
+          </div>
+        </div>
+
+        <div class="room-card" onclick="openRoom(3)">
+          <img src="room3.jpg" alt="Номер 3">
+          <div class="room-info">
+            <h3>Апартаменти Делюкс</h3>
+            <p>Гарно підходить для великої компанії</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Модальне вікно -->
+      <div id="modal" class="modal" onclick="backgroundClick(event)">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+          <img id="modal-img" src="" alt="">
+          <div id="caption"></div>
+          <div class="controls">
+            <button onclick="prevPhoto()">⟵</button>
+            <button onclick="nextPhoto()">⟶</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section" id="places">
+        <h2>Місця, які варто відвідати</h2>
+        <div class="gallery">
+          <a href="https://maps.app.goo.gl/ZzVeiZuHzf8moEe89" target="_blank">Вершина гори де розташована садиба</a>
+          <p>СИНЕВИР</p>
+          <a href="https://maps.app.goo.gl/vAhDcnAphef6FSck8" target="_blank">Озеро Синевир</a>
+          <a href="https://maps.app.goo.gl/UJpKGSZJQkGH4C1z7" target="_blank">Смачна колиба біля озера</a>
+          <a href="https://maps.app.goo.gl/fVz4VoSvKxpsvc2R7" target="_blank">Центр реабілітації бурих медведів</a>
+          <a href="https://maps.app.goo.gl/pDjw7kwKhtgjXJHKA" target="_blank">Екопарк долина вовків</a>
+          <a href="https://maps.app.goo.gl/L7eWAaRJSFsvWJGL6" target="_blank">Сироварня з найсмачнішою бринзою</a>
+          <a href="https://maps.app.goo.gl/6PqLZ9TFnfCscZgp8" target="_blank">Парк з оленями,ламами та альпаками</a>
+          <p>КОЛОЧАВА</p>
+          <a href="https://maps.app.goo.gl/ohmTr34pN9o9EUXB7" target="_blank">Форелеве господарство з найсмачнішою рибкою в районі</a>
+          <a href="https://maps.app.goo.gl/w5Ntoypiq5TeG9Po6" target="_blank">Етномузей "Старе село"</a>
+          <a href="https://maps.app.goo.gl/p6uEjUbRe3A7aZkX6" target="_blank">Тереблеріцьке Водосховище</a>
+          <p>ПИЛИПЕЦЬ</p>
+          <a href="https://maps.app.goo.gl/PMQL9bW9STD3XLza9" target="_blank">Водоспад Шипіт</a>
+          <a href="https://maps.app.goo.gl/kJDE4A3KQe4gzxpZ8" target="_blank">Смачний рибний ресторан біля водоспаду</a>
+          <a href="https://maps.app.goo.gl/qYr2tdVbcKB8LRf87" target="_blank">Крісельна канатна дорога в Пилипці</a>
+          <p>ФЕРМИ</p>
+          <a href="https://maps.app.goo.gl/cXzAMjmzfKEqamaR6" target="_blank">Буйволина ферма</a>
+          <a href="https://maps.app.goo.gl/f4jfuDiWKbcdgKYc7" target="_blank">Равликова ферма</a>
+          <a href="https://maps.app.goo.gl/uehim4NMvUePVgoW7" target="_blank">Ранчо Хайленд</a>
+          <a href="https://maps.app.goo.gl/6o8aWeUKJrt4QqkT8" target="_blank">Оленяча ферма</a>
+        </div>
+      </section>
+      <section class="section" id="restourants">
+        <h2>Їжа з доставкою</h2>
+        <div class="gallery">
+          <a href="https://www.instagram.com/tsarskahora/" target="_blank">Царська гора</a>
+          <a href="https://www.instagram.com/michelles_travel_house/" target="_blank">Mishelles Travel House</a>
+          <a href="https://www.instagram.com/fortuna_restaurant_and_hotel/" target="_blank">Фортуна</a>
+          <a href="https://www.instagram.com/sushi.vid.anet/" target="_blank">Найсмачніша доставка суші</a>
+        </div>
+      </section>
+      <section class="section" id="services">
+        <h2>Наші послуги</h2>
+        <ul>
+          <li>Чан із джакузі - 2000 грн (Бронювання мінімум за 4-5 годин наперед)</li>
+          <li>Екскурсії по Закарпаттю: Буйволина ферма, Водоспад Шипіт, озеро Синевир та багато іншого +380672889125</li>
+          <li>Трансфер до садиби з автовокзалу або залізничного вокзалу +380677659478</li>
+        </ul>
+      </section>
+      <section class="section" id="entertainment">
+        <h2>Додаткові розваги</h2>
+        <ul>
+          <li>Катання на квадроциклах</li>
+          <li>Піші прогулянки</li>
+          <li>Риболовля</li>
+          <li><a href="https://www.instagram.com/hookah.at.home1/" target="_blank">Доставка кальянів</a></li>
+        </ul>
+      </section>
+      <section class="section" id="social">
+        <h2>Ми у соціальних мережах</h2>
+        <div class="gallery">
+          <a href="https://www.instagram.com/sadyba_kychera_vip?igsh=MTVqcGVvMTE3YnR6cQ%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/share/168rGaR6UJ/?mibextid=wwXIfr" target="_blank">Facebook</a>
+          <a href="https://www.tiktok.com/@sadybakychera?_t=ZM-8vsdU0omoWF&_r=1" target="_blank">Tik Tok</a>
+        
+        </div>
+      </section>
+      
+      <section class="section" id="reviews">
+        <h2>Відгуки</h2>
+        <div class="reviews">
+          <a href="https://g.page/r/Cb1KcCz-mV6OEAI/review" target="_blank">Місце для Ваших відгуків</a>
+        </div>
+      </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Садиба "Кичера". Усі права захищено.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
