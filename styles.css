@@ -11,7 +11,6 @@ body {
     text-align: center;
     font-size: 20px;
     color: #fff;
-    position: relative;
 }
 
 a {
@@ -99,6 +98,35 @@ a:hover {
     font-size: 16px;
 }
 
+/* Медіа-запит для мобільних */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 16px;
+        background: 
+          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("main.jpg") top center no-repeat,
+          url("main.jpg") center center no-repeat,
+          url("main.jpg") bottom center no-repeat;
+        background-size: cover, auto, 150% auto, auto;
+    }
+
+    .section {
+        padding: 60px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+}
+
 /* 🔥 Нові стилі для модалки */
 .modal {
   display: none;
@@ -156,69 +184,16 @@ a:hover {
 .controls button:hover {
   background-color: #a67c52;
 }
-
 #reviews {
   font-size: 26px;
   font-weight: 600;
 }
 
 #reviews a {
-  font-size: 28px;
+  font-size: 28px; /* Щоб посилання теж були більші */
   color: #c79c64;
 }
 
 #reviews a:hover {
   text-decoration: underline;
-}
-
-/* 🎯 Додано нові стилі для мобільного фону */
-@media only screen and (max-width: 600px) {
-
-  body {
-    background: none;
-  }
-
-  .mobile-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-  }
-
-  .bg-part {
-    width: 100%;
-    height: 33.33vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .bg-part.up {
-    background-image: url("upmain.jpg");
-  }
-
-  .bg-part.middle {
-    background-image: url("main.jpg");
-  }
-
-  .bg-part.down {
-    background-image: url("endmain.jpg");
-  }
-
-  .section {
-    padding: 60px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-
-  a {
-    font-size: 18px;
-  }
 }
