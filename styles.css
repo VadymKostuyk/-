@@ -104,9 +104,9 @@ a:hover {
         font-size: 16px;
         background: 
           linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-          url("top-image.jpg") top center no-repeat,
+          url("upmain.jpg") top center no-repeat,
           url("main.jpg") center center no-repeat,
-          url("bottom-image.jpg") bottom center no-repeat;
+          url("endmain.jpg") bottom center no-repeat;
         background-size: cover, auto, 150% auto, auto;
     }
 
