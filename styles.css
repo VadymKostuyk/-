@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("main.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #c79c64;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #c79c64;
+    text-decoration: underline;
+}
+
+.gallery a {
+    display: block;
+    margin: 10px 0;
+}
+
+.header {
+    background: rgba(5, 5, 5, 0.9);
+    color: #fff;
+    padding: 20px;
+}
+
+.section {
+    padding: 120px;
+    background-color: transparent;
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 20px;
+    margin-top: 25px;
+    color: #fff;
+}
+
+/* Стилі для номерів */
+.rooms-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.room-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.room-card:hover {
+    transform: scale(1.05);
+}
+
+.room-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.room-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.room-info h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.room-info p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+/* Медіа-запит для мобільних */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 16px;
+        background: 
+          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("top-image.jpg") top center no-repeat,
+          url("main.jpg") center center no-repeat,
+          url("bottom-image.jpg") bottom center no-repeat;
+        background-size: cover, auto, 150% auto, auto;
+    }
+
+    .section {
+        padding: 60px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+}
+
+/* 🔥 Нові стилі для модалки */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.controls {
+  margin-top: 15px;
+}
+
+.controls button {
+  background-color: #c79c64;
+  color: white;
+  font-size: 24px;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.controls button:hover {
+  background-color: #a67c52;
+}
+#reviews {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+#reviews a {
+  font-size: 28px; /* Щоб посилання теж були більші */
+  color: #c79c64;
+}
+
+#reviews a:hover {
+  text-decoration: underline;
+}
