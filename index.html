@@ -7,6 +7,15 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<nav class="nav">
+  <a href="#rooms">Номери</a>
+  <a href="#services">Послуги</a>
+  <a href="#map">Локація</a>
+  <a href="#reviews">Відгуки</a>
+  <a href="#contacts" class="cta">Забронювати</a>
+</nav>
+
   <header class="header">
     <h1>Садиба "Кичера"</h1>
   </header>
@@ -37,6 +46,22 @@
             <h3>Апартаменти Делюкс</h3>
             <p>Гарно підходить для великої компанії</p>
           </div>
+        </div>
+      </div>
+
+      <div class="room-card" onclick="openRoom(4)">
+        <img src="room4.jpg" alt="Номер 4">
+        <div class="room-info">
+          <h3>Будиночок з двома спальнями</h3>
+          <p>Затишний та світлий будиночок для спокійного відпочинку</p>
+        </div>
+      </div>
+
+      <div class="room-card" onclick="openRoom(5)">
+        <img src="room5.jpg" alt="Номер 5">
+        <div class="room-info">
+          <h3>Затишний номер для двох</h3>
+          <p>Двохмісний номер з неймовірними краєвидами</p>
         </div>
       </div>
 
@@ -122,6 +147,10 @@
           <li>Чан із джакузі - 3000 грн (Бронювання мінімум за 4-5 годин наперед)</li>
           <li>Екскурсії по Закарпаттю: Буйволина ферма, Водоспад Шипіт, озеро Синевир та багато іншого.   Якщо кажете що з Садиби Кичера- буде знижка +380981181150</li>
           <li>Трансфер до садиби з автовокзалу або залізничного вокзалу +380677659478</li>
+          <li>Wi‑Fi</li>
+          <li>Паркінг</li>
+          <li>Мангал з усім необхідним</li>
+
         </ul>
       </section>
       <section class="section" id="entertainment">
@@ -149,7 +178,26 @@
           <a href="https://g.page/r/Cb1KcCz-mV6OEAI/review" target="_blank">Місце для Ваших відгуків</a>
         </div>
       </section>
-  </main>
+
+<section class="section" id="map">
+  <h2>Де ми знаходимось</h2>
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24694.277226075355!2d23.489657090327977!3d48.51663742478852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4739dd44b8d8d921%3A0x8e5e99fe2c704abd!2z0KfQsNC9INCh0LDQtNC40LHQsCDQmtC40YfQtdGA0LA!5e1!3m2!1suk!2sua!4v1770116195967!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<section class="section" id="reviews">
+  <h2>Відгуки гостей</h2>
+  <blockquote>“Дуже затишно і неймовірна природа!” ⭐⭐⭐⭐⭐</blockquote>
+  <blockquote>“Чисто, привітні господарі, повернемось ще.” ⭐⭐⭐⭐⭐</blockquote>
+  <blockquote>“Неймовірні краєвиди і затишні умови, обов'язково повернемось ще!” ⭐⭐⭐⭐⭐</blockquote>
+</section>
+
+<section class="section" id="contacts">
+  <h2>Контакти</h2>
+  <p>📞 <a href="tel:+380000000000">+38 0677659478</a></p>
+  <p>✉️ <a href="mailto:info@kichera.com">wadim.r.k.36@gmail.com</a></p>
+</section>
+
+</main>
 
   <footer class="footer">
     <p>© 2025 Садиба "Кичера". Усі права захищено.</p>
